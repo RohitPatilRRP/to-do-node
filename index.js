@@ -21,7 +21,16 @@ const findTask = (title) => {
     });
 }
 
+const delTask = (srno) => {
+    todo.remove(srno)
+    .then(srno=>{
+        console.info("deleted");
+        db.close();
+    });
+}
+
 module.exports = {
     addTask,
-    findTask
+    findTask,
+    delTask
 }

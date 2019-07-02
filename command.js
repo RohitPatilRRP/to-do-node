@@ -1,7 +1,8 @@
 var program = require('commander');
 const {
     addTask,
-    findTask
+    findTask,
+    delTask
 }=require('./index');
 program
  .version('1.0.0')
@@ -22,6 +23,14 @@ program
   .action((title)=>{
     findTask({title});
 
+  });
+
+  program
+  .command('remove <srno>')
+  .alias('r')
+  .description('remove a task')
+  .action((srno)=>{
+    delTask({srno});
   });
 
 program.parse(process.argv);
