@@ -12,6 +12,12 @@ const {
 const questions = [
   {
     type: 'input',
+  name: 'sr no',
+  message: 'add sr no'
+  },
+  
+  {
+    type: 'input',
   name: 'title',
   message: 'task title'
   },
