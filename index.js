@@ -8,16 +8,16 @@ const todo = require('./models/todo');
 const addTask = (task) => {
     todo.create(task).then(task => {
         console.info("added succesfully");
-        mongoose.close();
+        db.close();
     });
 }
 
 const findTask = (title) => {
-    const search = new RegExp(name,'i');
+    const search = new RegExp(title,'i');
     todo.find({title:search})
     .then(title =>{
         console.info(task);
-        mongoose.close();
+        db.close();
     });
 }
 
@@ -26,7 +26,7 @@ const delTask = (srno) => {
     todo.remove(srno)
     .then(srno=>{
         console.info("deleted");
-        mongoose.close();
+        db.close();
     });
 }
 

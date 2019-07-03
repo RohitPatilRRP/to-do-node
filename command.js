@@ -29,14 +29,6 @@ const questions = [
 program
  .version('1.0.0')
 
- //program
-  //.command('add <srno> <title> <descp>')
- // .alias('a')
-  //.description('Add a task')
-  //.action((srno,title,descp)=>{
-   // addTask({srno,title,descp});
-
- // });
  program
   .command('add')
   .alias('a')
@@ -51,7 +43,6 @@ program
   .description('find a task')
   .action((title)=>{
     findTask({title});
-
   });
 
   program
