@@ -5,6 +5,7 @@ const {
     addTask,
     findTask,
     delTask,
+    list
      
 }=require('./index');
 
@@ -20,6 +21,7 @@ const questions = [
     type: 'input',
   name: 'title',
   message: 'task title'
+
   },
   {
     type: 'input',
@@ -54,7 +56,14 @@ program
   .action((title)=>{
     findTask({title});
   });
-
+ program
+  .command('list')
+  .alias('l')
+  .description('list')
+  .action(()=>{
+    list({});
+    
+  })
 
   program
   .command('remove <srno>')
