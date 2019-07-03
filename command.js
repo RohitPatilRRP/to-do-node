@@ -1,19 +1,43 @@
-var program = require('commander');
+const program = require('commander');
+const { prompt } = require('inquirer');
+
 const {
     addTask,
     findTask,
     delTask
 }=require('./index');
+
+
+const questions = [
+  {
+    type: 'input',
+  name: 'title',
+  message: 'task title'
+  },
+  {
+    type: 'input',
+    name: 'description',
+    message: 'task description'
+  }
+];
+
 program
  .version('1.0.0')
 
- program
-  .command('add <srno> <title> <descp>')
-  .alias('a')
-  .description('Add a task')
-  .action((srno,title,descp)=>{
-    addTask({srno,title,descp});
+ //program
+  //.command('add <srno> <title> <descp>')
+ // .alias('a')
+  //.description('Add a task')
+  //.action((srno,title,descp)=>{
+   // addTask({srno,title,descp});
 
+ // });
+ program
+  .command('add')
+  .alias('a')
+  .description('add a task')
+  .action(() => {
+    prompt(questions).then(answers => addTask(answers));
   });
 
   program
