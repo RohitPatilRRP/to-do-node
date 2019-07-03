@@ -12,19 +12,14 @@ const {
 const questions = [
   {
     type: 'input',
-<<<<<<< HEAD
   name: 'srno',
   message: 'serial number'
-=======
-  name: 'sr no',
-  message: 'add sr no'
   },
-  
+   
   {
     type: 'input',
   name: 'title',
   message: 'task title'
->>>>>>> 7670a158d0664a8e76b69389638be5dbabf61d01
   },
   {
     type: 'input',
