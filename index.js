@@ -21,7 +21,6 @@ const findTask = (title) => {
     });
 }
 
-<<<<<<< HEAD
 const delTask = (srno) => {
     todo.remove(srno)
     .then(srno=>{
@@ -29,9 +28,6 @@ const delTask = (srno) => {
         db.close();
     });
 }
-=======
-
->>>>>>> 685477b310ebe04cc8c24bcb8528b833c9c49092
 
 module.exports = {
     addTask,
