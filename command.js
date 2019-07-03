@@ -4,20 +4,16 @@ const { prompt } = require('inquirer');
 const {
     addTask,
     findTask,
-    delTask
+    delTask,
+     
 }=require('./index');
 
 
 const questions = [
   {
     type: 'input',
-    name: 'srno',
-    message: 'serial number'
-  },
-  {
-    type: 'input',
-  name: 'title',
-  message: 'task title'
+  name: 'srno',
+  message: 'serial number'
   },
   {
     type: 'input',
@@ -28,8 +24,7 @@ const questions = [
 
 program
  .version('1.0.0')
-
- //program
+  //program
   //.command('add <srno> <title> <descp>')
  // .alias('a')
   //.description('Add a task')
@@ -37,6 +32,7 @@ program
    // addTask({srno,title,descp});
 
  // });
+
  program
   .command('add')
   .alias('a')
@@ -51,8 +47,8 @@ program
   .description('find a task')
   .action((title)=>{
     findTask({title});
-
   });
+
 
   program
   .command('remove <srno>')
