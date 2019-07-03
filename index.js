@@ -37,10 +37,18 @@ const delTask = (srno) => {
         db.close();
     });
 }
+const updateTask=(srno) => {
+    todo.update(srno)
+    .then(srno=>{
+        console.info("updated");
+        db.close();
+    });
+}
 
 module.exports = {
     addTask,
     findTask,
     delTask,
-    list
+    list,
+    updateTask
 }

@@ -5,7 +5,8 @@ const {
     addTask,
     findTask,
     delTask,
-    list
+    list,
+    updateTask
      
 }=require('./index');
 
@@ -71,6 +72,18 @@ program
   .description('remove a task')
   .action((srno)=>{
     delTask({srno});
+  })
+
+
+  program
+  .command('update <srno>')
+  .alias('u')
+  .description('update a task')
+  .action(()=>{
+
+    prompt(questions).then(answers => updateTask(answers));
+  
   });
+
 
 program.parse(process.argv);
