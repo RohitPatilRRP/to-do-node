@@ -11,6 +11,11 @@ const {
 const questions = [
   {
     type: 'input',
+    name: 'srno',
+    message: 'serial number'
+  },
+  {
+    type: 'input',
   name: 'title',
   message: 'task title'
   },
