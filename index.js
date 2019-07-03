@@ -21,6 +21,15 @@ const findTask = (title) => {
     });
 }
 
+const list = () => {
+        todo.find()
+    .then(data =>{
+        console.info(data);
+        db.close();
+
+    });
+}
+
 const delTask = (srno) => {
     todo.remove(srno)
     .then(srno=>{
@@ -32,5 +41,6 @@ const delTask = (srno) => {
 module.exports = {
     addTask,
     findTask,
-    delTask
+    delTask,
+    list
 }

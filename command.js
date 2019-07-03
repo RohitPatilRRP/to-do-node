@@ -4,16 +4,12 @@ const { prompt } = require('inquirer');
 const {
     addTask,
     findTask,
-    delTask
+    delTask,
+    list 
 }=require('./index');
 
 
 const questions = [
-  {
-    type: 'input',
-    name: 'srno',
-    message: 'serial number'
-  },
   {
     type: 'input',
   name: 'title',
@@ -43,6 +39,15 @@ program
   .description('find a task')
   .action((title)=>{
     findTask({title});
+  });
+
+  program
+  .command('list')
+  .alias('l')
+  .description('list')
+  .action(()=>{
+    list({});
+
   });
 
   program
