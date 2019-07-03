@@ -13,15 +13,9 @@ const addTask = (task) => {
 }
 
 const findTask = (title) => {
-<<<<<<< HEAD
     const search = new RegExp(title,'i');
     todo.find({title:search})
     .then(title =>{
-=======
-    console.log(title);
-    todo.find(title)
-    .then(task =>{
->>>>>>> 661fe9cc5aa9c723bed0ef9ce34debde3372ca00
         console.info(task);
         db.close();
     });
